@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment Results</title>
+</head>
+<body>
+    <h1>Assessment Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Last Assessed</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repo in repositories %}
+            <tr>
+                <td>{{ repo.name }}</td>
+                <td>{{ repo.last_assessed }}</td>
+                <td>{{ repo.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
